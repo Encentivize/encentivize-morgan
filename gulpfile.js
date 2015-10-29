@@ -6,6 +6,7 @@ var tslint = require('gulp-tslint');
 var jshint = require('gulp-jshint');
 var istanbul = require('gulp-istanbul');
 var mocha = require('gulp-mocha');
+var argv = require('yargs').argv;
 
 gulp.task('clean', cleanTask);
 gulp.task('tslint', tslintTask);
