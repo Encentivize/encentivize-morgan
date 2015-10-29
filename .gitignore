@@ -27,4 +27,4 @@ build/Release
 node_modules
 typings
 build
-./*.tgz
+./encentivize-morgan-1.0.*.tgz
