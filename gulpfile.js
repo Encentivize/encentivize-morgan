@@ -104,8 +104,8 @@ function npmPublishTask(callback) {
             if (addUserError) {
                 return callback(addUserError);
             }
-            var packageJson = _.clone(require('./package.json'));
-            npm.commands.pack([], function (packError) {
+            var packageJson = _.clone(require('./build/src/package.json'));
+            npm.commands.pack(['./build/src'], function (packError) {
                 if (packError) {
                     return callback(packError);
                 }
