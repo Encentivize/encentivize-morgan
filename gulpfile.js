@@ -105,16 +105,16 @@ function npmPublishTask(callback) {
                 return callback(addUserError);
             }
             var packageJson = _.clone(require('./build/src/package.json'));
-            npm.commands.pack(['./build/src'], function (packError) {
+            npm.commands.pack(['build/src'], function (packError) {
                 if (packError) {
                     return callback(packError);
                 }
-                var fileName = packageJson.name.substring(1).replace(/\//g, '-') + '-' + packageJson.version + '.tgz';
+                var fileName = packageJson.name + '-' + packageJson.version + '.tgz';
                 var bodyPath = require.resolve('./' + fileName);
                 var body = fs.createReadStream(bodyPath);
                 var publishParams = {
                     metadata: packageJson,
-                    access: 'restricted',
+                    access: 'public',
                     body: body,
                     auth: auth
                 };
