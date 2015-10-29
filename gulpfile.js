@@ -15,6 +15,8 @@ gulp.task('copy-npm-files', ['lint'], copyNpmFilesTask);
 gulp.task('ts', ['copy-npm-files'], tsTask);
 gulp.task('pretest', ['ts'], pretestTask);
 gulp.task('test', ['pretest'], testTask);
+gulp.task('build', ['test']);
+gulp.task('npm-publish', npmPublishTask);
 
 function cleanTask() {
     return del('build');
@@ -62,4 +64,8 @@ function testTask() {
             global: 90
         }
     }));
+}
+
+function npmPublishTask() {
+    // body...
 }
