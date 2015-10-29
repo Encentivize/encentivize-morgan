@@ -27,6 +27,7 @@
     "gulp-tslint": "3.4.0",
     "gulp-typescript": "2.9.2",
     "lodash": "3.10.1",
+    "npm": "3.3.9",
     "sinon": "1.17.2",
     "sinon-chai": "2.8.0",
     "tsd": "0.6.5",
