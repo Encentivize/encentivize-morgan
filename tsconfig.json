@@ -1,0 +1,45 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "isolatedModules": false,
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true
+    },
+    "filesGlob": [
+        "src/**/*.ts",
+        "tests/**/*.ts",
+        "typings/**/*.ts"
+    ],
+    "files": [
+        "src/index.ts",
+        "src/skip/node-azure.ts",
+        "src/tokens/body.ts",
+        "tests/index.ts",
+        "tests/skip/node-azure.ts",
+        "tests/tokens/body.ts",
+        "typings/assertion-error/assertion-error.d.ts",
+        "typings/chai/chai.d.ts",
+        "typings/express/express.d.ts",
+        "typings/lodash/lodash.d.ts",
+        "typings/mime/mime.d.ts",
+        "typings/mocha/mocha.d.ts",
+        "typings/morgan/morgan.d.ts",
+        "typings/node/node.d.ts",
+        "typings/serve-static/serve-static.d.ts",
+        "typings/sinon-chai/sinon-chai.d.ts",
+        "typings/sinon/sinon.d.ts",
+        "typings/tsd.d.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
