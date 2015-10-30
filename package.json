@@ -1,6 +1,6 @@
 {
   "name": "encentivize-morgan",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "commonly used morgan configuration at encentivize",
   "main": "index.js",
   "scripts": {
