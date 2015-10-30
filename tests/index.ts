@@ -7,6 +7,12 @@ chai.use(sinonChai);
 const expect = chai.expect;
 
 describe("index", () => {
+    describe("#initialize", () => {
+        it("should return an object", () => {
+            let morgan = index.initialize();
+            expect(morgan).to.exist;
+        });
+    });
     describe("format", () => {
         it("should be a string", () => {
             expect(index.format).to.be.a("string");

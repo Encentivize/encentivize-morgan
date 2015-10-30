@@ -1,7 +1,6 @@
 var morgan = require("morgan");
 var body = require("./tokens/body");
 var skip = require("./skip/node-azure");
-morgan.token("body", body);
 var options = {
     skip: skip,
     stream: function () {
@@ -12,7 +11,13 @@ var options = {
         };
     }
 };
+var format = "[:date[iso]] \":method :url HTTP/:http-version\" :status :res[content-length] \":referrer\" \":user-agent\" :body";
+var initialize = function () {
+    morgan.token("body", body);
+    return morgan(format, options);
+};
 module.exports = {
-    format: "[:date[iso]] \":method :url HTTP/:http-version\" :status :res[content-length] \":referrer\" \":user-agent\" :body",
-    options: options
+    format: format,
+    options: options,
+    initialize: initialize
 };

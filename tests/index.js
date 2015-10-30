@@ -6,6 +6,12 @@ var sinonChai = require("sinon-chai");
 chai.use(sinonChai);
 var expect = chai.expect;
 describe("index", function () {
+    describe("#initialize", function () {
+        it("should return an object", function () {
+            var morgan = index.initialize();
+            expect(morgan).to.exist;
+        });
+    });
     describe("format", function () {
         it("should be a string", function () {
             expect(index.format).to.be.a("string");
